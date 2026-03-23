@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Services - Project Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Project Portfolio</a>
+
+        <!-- CSS Hamburger Menu Icon (no Font Awesome needed) -->
+        <div id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navbar">
+            <a href="index.html"> Home </a>
+            <a href="services.html" class="active"> Services </a>
+            <a href="skills.html"> Skills </a>
+            <a href="education.html"> Education </a>
+            <a href="experience.html"> Experience </a>
+            <a href="contact.html"> Contact </a>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h2 class="heading">My <span>Services</span></h2>
+        
+        <div class="services-container">
+            <div class="service-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web & Software Development</h3>
+                <p>Custom web applications, RESTful API development, and backend solutions using Node.js, Python, and C#. Responsive design with HTML, CSS, and JavaScript for seamless user experiences.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <h3>Mobile App Development</h3>
+                <p>Native Android application development using Java. Creating intuitive, mobile-first solutions tailored to your business needs with clean code and efficient performance.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-database"></i>
+                <h3>Data Management & Analysis</h3>
+                <p>Database design and management with MySQL and Firebase. Data encoding, validation, and organization. Spreadsheet automation and basic data analysis to turn raw data into insights.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Technical Documentation</h3>
+                <p>Comprehensive technical documentation including API docs, user guides, README files, and project reports. Clear communication of complex technical concepts for diverse audiences.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-list-check"></i>
+                <h3>Project Management</h3>
+                <p>Project planning, task estimation, and team collaboration. Effective time management, progress tracking, and meeting facilitation to ensure successful project delivery.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>Administrative & Digital Services</h3>
+                <p>Virtual assistant services, digital filing, document processing, and records management. Proficient with Microsoft Office Suite for professional business solutions.</p>
+            </div>
+        </div>
+        <a href="contact.html" class="btn">Contact Me</a>
+    </section>
+
+<!-- JavaScript for Menu Toggle -->
+<script>
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('#navbar');
+
+    // Toggle menu when clicking hamburger icon
+    menuIcon.onclick = (e) => {
+        e.stopPropagation(); // Prevent event from bubbling to document
+        navbar.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+    }
+
+    // Close menu when clicking outside
+    document.onclick = (e) => {
+        // If click is outside navbar and menu icon, close the menu
+        if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
+            navbar.classList.remove('active');
+            menuIcon.classList.remove('active');
+        }
+    }
+
+    // Prevent clicks inside navbar from closing it
+    navbar.onclick = (e) => {
+        e.stopPropagation();
+    }
+</script>
+</body>
+</html>

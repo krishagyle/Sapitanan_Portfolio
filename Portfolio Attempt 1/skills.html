@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Skills - Project Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Project Portfolio</a>
+
+        <!-- Hamburger Menu Icon -->
+        <div id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navbar">
+            <a href="index.html"> Home </a>
+            <a href="services.html"> Services </a>
+            <a href="skills.html" class="active"> Skills </a>
+            <a href="education.html"> Education </a>
+            <a href="experience.html"> Experience </a>
+            <a href="contact.html"> Contact </a>
+        </nav>
+    </header>
+
+    <section class="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        
+        <div class="skills-container">
+            <!-- Technical Skills -->
+            <div class="skill-category">
+                <h3><i class="fa-solid fa-code"></i> Technical Skills</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <span class="skill-name">Backend Development</span>
+                        <span class="skill-tech">Node.js, Python, C#</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Programming Languages</span>
+                        <span class="skill-tech">Python, C#, C, JavaScript/Node.js, Java (basics)</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Mobile Development</span>
+                        <span class="skill-tech">Android (Java)</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Databases</span>
+                        <span class="skill-tech">MySQL, Firebase, XAMPP (PHP + Apache + MySQL)</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Version Control</span>
+                        <span class="skill-tech">Git & GitHub</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Tools</span>
+                        <span class="skill-tech">VS Code, Android Studio, phpMyAdmin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Management -->
+            <div class="skill-category">
+                <h3><i class="fa-solid fa-list-check"></i> Project Management & Processes</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <span class="skill-name">Project Planning</span>
+                        <span class="skill-tech">Task estimation & prioritization</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Collaboration</span>
+                        <span class="skill-tech">Team collaboration & remote work</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Time Management</span>
+                        <span class="skill-tech">Meeting deadlines & efficient workflow</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentation & Communication -->
+            <div class="skill-category">
+                <h3><i class="fa-solid fa-file-lines"></i> Documentation & Communication</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <span class="skill-name">Technical Documentation</span>
+                        <span class="skill-tech">READMEs, API docs, user guides</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Project Reports</span>
+                        <span class="skill-tech">Meeting notes & progress updates</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Communication</span>
+                        <span class="skill-tech">Clear written and verbal communication</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Microsoft Office Suite</span>
+                        <span class="skill-tech">Word, Excel, PowerPoint</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional & Soft Skills -->
+            <div class="skill-category">
+                <h3><i class="fa-solid fa-user-tie"></i> Professional & Soft Skills</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <span class="skill-name">Adaptability</span>
+                        <span class="skill-tech">Highly adaptable & flexible with changing priorities</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Teamwork</span>
+                        <span class="skill-tech">Strong teamwork and cross-functional collaboration</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Active Listening</span>
+                        <span class="skill-tech">Active listening & emotional intelligence</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Quick Learner</span>
+                        <span class="skill-tech">Quick learner in new environments and technologies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('#navbar');
+
+    menuIcon.onclick = (e) => {
+        e.stopPropagation();
+        navbar.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+    }
+
+    document.onclick = (e) => {
+        if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
+            navbar.classList.remove('active');
+            menuIcon.classList.remove('active');
+        }
+    }
+
+    navbar.onclick = (e) => {
+        e.stopPropagation();
+    }
+</script>
+</body>
+</html>

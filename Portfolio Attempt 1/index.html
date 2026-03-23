@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Project Portfolio</a>
+
+        <!-- CSS Hamburger Menu Icon (no Font Awesome needed) -->
+        <div id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navbar">
+            <a href="index.html" class="active"> Home </a>
+            <a href="services.html"> Services </a>
+            <a href="skills.html"> Skills </a>
+            <a href="education.html"> Education </a>
+            <a href="experience.html"> Experience </a>
+            <a href="contact.html"> Contact </a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="PortfolioProfile.svg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Krisha!</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>
+                With a solid foundation in database management and hands-on experience across technologies such as C#, Python, Node.js, XML, HTML, and CSS, I bring a versatile skill set to every project I take on. Rooted in backend development, I am now expanding my horizons into the world of UI/UX and Frontend Development — driven by a genuine curiosity to craft seamless user experiences. I am also an aspiring Data Analyst, fueled by a deep passion for uncovering insights and turning raw data into meaningful stories. While I am still refining my skills in this space, my eagerness to grow and my ability to learn quickly make me a dedicated and adaptable professional, ready to embrace new challenges head-on.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <a href="#" class="btn"> Hire me </a>
+        </div>
+    </section>
+
+<!-- JavaScript for Menu Toggle -->
+<script>
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('#navbar');
+
+    // Toggle menu when clicking hamburger icon
+    menuIcon.onclick = (e) => {
+        e.stopPropagation(); // Prevent event from bubbling to document
+        navbar.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+    }
+
+    // Close menu when clicking outside
+    document.onclick = (e) => {
+        // If click is outside navbar and menu icon, close the menu
+        if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
+            navbar.classList.remove('active');
+            menuIcon.classList.remove('active');
+        }
+    }
+
+    // Prevent clicks inside navbar from closing it
+    navbar.onclick = (e) => {
+        e.stopPropagation();
+    }
+</script>
+</body>
+</html>
