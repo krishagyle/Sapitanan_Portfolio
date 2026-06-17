@@ -8,7 +8,7 @@ function Header() {
       {/* Desktop Header */}
       <header>
         <NavLink to="/" className="logo">
-          Project Portfolio
+          My Portfolio
         </NavLink>
 
         <nav id="navbar">
