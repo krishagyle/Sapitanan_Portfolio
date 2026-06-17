@@ -27,6 +27,9 @@ function Header() {
           <NavLink to="/experience" className={({ isActive }) => isActive ? 'active' : ''}>
             Experience
           </NavLink>
+          <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>
+            Projects
+          </NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
             Contact
           </NavLink>
@@ -54,6 +57,10 @@ function Header() {
         <NavLink to="/experience" className={({ isActive }) => `bottom-bar-item ${isActive ? 'active' : ''}`}>
           <i className="fa-solid fa-chart-line"></i>
           <span>Experience</span>
+        </NavLink>
+        <NavLink to="/projects" className={({ isActive }) => `bottom-bar-item ${isActive ? 'active' : ''}`}>
+          <i className="fa-solid fa-folder-open"></i>
+          <span>Projects</span>
         </NavLink>
         <NavLink to="/contact" className={({ isActive }) => `bottom-bar-item ${isActive ? 'active' : ''}`}>
           <i className="fa-solid fa-envelope"></i>

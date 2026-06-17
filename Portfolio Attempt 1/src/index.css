@@ -113,7 +113,7 @@ header {
         position: relative;
         flex: 1 1 0%;
         min-width: 0;
-        max-width: 16.666%;
+        max-width: 14.285%;
         /* Override any inherited nav a styles */
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -217,6 +217,7 @@ section {
     .skills,
     .education,
     .experience,
+    .projects,
     .contact {
         padding-top: 3rem;
     }
@@ -1126,6 +1127,206 @@ span {
     .exp-role-desc { font-size: 1.2rem; padding: 0.8rem 1rem; margin-bottom: 1rem; }
     .exp-duties li { font-size: 1.2rem; margin-bottom: 0.8rem; padding-left: 2rem; line-height: 1.5; }
     .exp-duties li::before { font-size: 1.4rem; }
+}
+
+
+/* ========== PROJECTS PAGE STYLES ========== */
+
+.projects {
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects .heading {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+    font-weight: 700;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    padding: 3rem 2.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 2rem;
+    border: 0.2rem solid #e50707;
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(229, 7, 7, 0.05), transparent);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.project-card:hover {
+    background-color: rgba(117, 9, 9, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(229, 7, 7, 0.3);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    min-width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e50707, #750909);
+    border-radius: 1.2rem;
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.project-card:hover .project-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(229, 7, 7, 0.5);
+}
+
+.project-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.project-info {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(229, 7, 7, 0.25);
+}
+
+.project-header h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: white;
+}
+
+.project-date {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.project-date i {
+    color: #e50707;
+    font-size: 1.4rem;
+}
+
+.project-desc {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-tags .tag {
+    background: rgba(229, 7, 7, 0.15);
+    color: #e50707;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 1px solid rgba(229, 7, 7, 0.3);
+    transition: 0.3s ease;
+}
+
+.project-tags .tag:hover {
+    background: #e50707;
+    color: white;
+}
+
+/* Projects Responsive */
+@media (max-width: 768px) {
+    .projects .heading { font-size: 3rem; margin-bottom: 2.5rem; }
+    .projects-container { margin-top: 3rem; gap: 2rem; }
+    .project-card { padding: 2rem 1.5rem; gap: 1.5rem; }
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+    .project-header h3 { font-size: 1.8rem; }
+    .project-date { font-size: 1.3rem; }
+    .project-desc { font-size: 1.3rem; margin-bottom: 1.5rem; }
+}
+
+@media (max-width: 450px) {
+    .projects { padding: 3rem 5% 5rem; }
+    .projects .heading { font-size: 2.6rem; margin-bottom: 2rem; }
+    .projects-container { gap: 1.5rem; margin-top: 2rem; }
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+    .project-icon {
+        width: 5rem;
+        height: 5rem;
+        min-width: 5rem;
+    }
+    .project-header {
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: center;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    .project-header h3 { font-size: 1.6rem; }
+    .project-date { font-size: 1.2rem; }
+    .project-desc { font-size: 1.2rem; line-height: 1.5; margin-bottom: 1.5rem; }
+    .project-tags {
+        justify-content: center;
+    }
 }
 
 /* ========== CONTACT PAGE STYLES ========== */

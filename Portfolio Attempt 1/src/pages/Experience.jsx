@@ -6,7 +6,32 @@ function Experience() {
       {/* Timeline Container */}
       <div className="timeline">
 
-        {/* Experience Item 3 - Most Recent */}
+        {/* Experience Item 4 - Most Recent */}
+        <div className="timeline-item">
+          <div className="timeline-dot"></div>
+          <div className="timeline-content">
+            <div className="exp-header">
+              <div className="exp-title">
+                <h3><i className="fa-solid fa-laptop-code"></i> Frontend Developer &amp; Technical Writer</h3>
+                <span className="exp-badge">OJT 2026</span>
+              </div>
+              <div className="exp-meta">
+                <p className="exp-company"><i className="fa-solid fa-landmark"></i> Laguna Management Information Systems Office</p>
+                <p className="exp-org"><i className="fa-solid fa-city"></i> Provincial Capitol of Laguna</p>
+                <p className="exp-date"><i className="fa-solid fa-calendar-days"></i> February 2026 – April 2026</p>
+              </div>
+            </div>
+            <div className="exp-details">
+              <h4><i className="fa-solid fa-clipboard-list"></i> Duties and Responsibilities</h4>
+              <ul className="exp-duties">
+                <li>Designed and built an interactive, user-friendly frontend interface tailored for non-technical users, improving accessibility and overall usability of the system.</li>
+                <li>Served as technical writer for the team: recorded meeting notes and produced user manuals to support documentation and knowledge transfer.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Experience Item 3 */}
         <div className="timeline-item">
           <div className="timeline-dot"></div>
           <div className="timeline-content">
