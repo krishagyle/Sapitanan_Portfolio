@@ -118,7 +118,7 @@ function Contact() {
               <h4>Follow Me</h4>
               <div className="social-icons">
                 <a href="https://www.linkedin.com/in/sapitanan-krisha-gyle-c-912527315" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i className="fa-brands fa-linkedin"></i></a>
-                <a href="#" title="GitHub"><i className="fa-brands fa-github"></i></a>
+                <a href="https://github.com/krishagyle" title="GitHub"><i className="fa-brands fa-github"></i></a>
                 <a href="#" title="X / Twitter"><i className="fa-brands fa-x-twitter"></i></a>
                 <a href="#" title="Instagram"><i className="fa-brands fa-instagram"></i></a>
                 <a href="#" title="Facebook"><i className="fa-brands fa-facebook"></i></a>
