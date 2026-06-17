@@ -89,6 +89,12 @@ function Education() {
           <h3><i className="fa-solid fa-users"></i> Conferences, Trainings &amp; Seminars</h3>
           <div className="development-list">
             <div className="development-item">
+              <h4>Mastering Visual Graphic Design Using Adobe Photoshop and AI</h4>
+              <p><i className="fa-solid fa-building"></i> Laguna Management Information Systems Office</p>
+              <p><i className="fa-solid fa-calendar"></i> March 2026</p>
+            </div>
+
+            <div className="development-item">
               <h4>Code. Connect. Contribute: Preparing IT Professionals</h4>
               <p><i className="fa-solid fa-building"></i> Laguna University College of Computing Studies</p>
               <p><i className="fa-solid fa-calendar"></i> December 03, 2025</p>

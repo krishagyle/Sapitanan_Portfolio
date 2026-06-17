@@ -19,6 +19,15 @@ function Projects() {
               This is a marketplace for farmers to directly sell to Local Buyers of Laguna without being dependent to middlemen.
             </p>
             <div className="project-video-container">
+              <a 
+                href="https://drive.google.com/file/d/1YWNUr4KzUV0OHWKkctor5LiRRJYGUwTA/view" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="video-maximize-btn" 
+                title="Maximize Video"
+              >
+                <i className="fa-solid fa-expand"></i>
+              </a>
               <iframe 
                 src="https://drive.google.com/file/d/1YWNUr4KzUV0OHWKkctor5LiRRJYGUwTA/preview" 
                 allow="autoplay" 
