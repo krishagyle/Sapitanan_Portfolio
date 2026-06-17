@@ -4,7 +4,7 @@ function Home() {
   return (
     <section className="home">
       <div className="home-img">
-        <img src="/PortfolioProfile.svg" alt="Krisha Gyle - Portfolio Profile" />
+        <img src="/PortfolioProfile.jpg" alt="Krisha Gyle - Portfolio Profile" />
       </div>
       <div className="home-content">
         <h1>Hi, It&apos;s <span>Krisha!</span></h1>
