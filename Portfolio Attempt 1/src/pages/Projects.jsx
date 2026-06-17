@@ -18,6 +18,21 @@ function Projects() {
             <p className="project-desc">
               This is a marketplace for farmers to directly sell to Local Buyers of Laguna without being dependent to middlemen.
             </p>
+            <div className="project-video-container">
+              <iframe 
+                src="https://drive.google.com/file/d/1YWNUr4KzUV0OHWKkctor5LiRRJYGUwTA/preview" 
+                allow="autoplay" 
+                title="FarmerConnect Demo Video"
+              ></iframe>
+            </div>
+            <div className="project-links">
+              <a href="https://canva.link/78cp5qm7ygmjvpm" target="_blank" rel="noopener noreferrer" className="project-link">
+                <i className="fa-solid fa-book"></i> Farmer User Manual
+              </a>
+              <a href="https://canva.link/2vp00mv3ci990dj" target="_blank" rel="noopener noreferrer" className="project-link">
+                <i className="fa-solid fa-book"></i> Consumer User Manual
+              </a>
+            </div>
             <div className="project-tags">
               <span className="tag">Marketplace</span>
               <span className="tag">Agriculture</span>
