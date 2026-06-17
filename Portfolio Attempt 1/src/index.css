@@ -66,9 +66,9 @@ nav a.active {
     border-bottom: 3px solid #e50707;
 }
 
-/* Hide desktop nav on mobile */
+/* Hide entire desktop header on mobile */
 @media(max-width:995px) {
-    #navbar {
+    header {
         display: none !important;
     }
 }
@@ -88,14 +88,26 @@ nav a.active {
         justify-content: space-around;
         align-items: center;
         z-index: 1000;
-        background: rgba(14, 14, 14, 0.92);
-        backdrop-filter: blur(20px) saturate(180%);
-        -webkit-backdrop-filter: blur(20px) saturate(180%);
-        border-top: 1px solid rgba(229, 7, 7, 0.25);
-        padding: 0.6rem 0;
-        padding-bottom: calc(0.6rem + env(safe-area-inset-bottom, 0px));
-        box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5),
-                    0 -1px 8px rgba(229, 7, 7, 0.1);
+        background: rgba(10, 10, 10, 0.96);
+        backdrop-filter: blur(24px) saturate(200%);
+        -webkit-backdrop-filter: blur(24px) saturate(200%);
+        border-top: 1px solid rgba(229, 7, 7, 0.2);
+        padding: 0.4rem 0.4rem;
+        padding-bottom: calc(0.4rem + env(safe-area-inset-bottom, 0px));
+        box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.6),
+                    0 -1px 10px rgba(229, 7, 7, 0.08);
+    }
+
+    /* Reset inherited nav a styles for bottom bar */
+    .mobile-bottom-bar .bottom-bar-item {
+        margin-left: 0;
+        border-bottom: none;
+        font-size: inherit;
+    }
+
+    .mobile-bottom-bar .bottom-bar-item:hover,
+    .mobile-bottom-bar .bottom-bar-item.active {
+        border-bottom: none;
     }
 
     .bottom-bar-item {
@@ -103,27 +115,33 @@ nav a.active {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0.3rem;
-        padding: 0.5rem 0.8rem;
-        border-radius: 1.2rem;
-        color: rgba(255, 255, 255, 0.45);
-        font-size: 1rem;
+        gap: 0.2rem;
+        padding: 0.5rem 0;
+        border-radius: 1rem;
+        color: rgba(255, 255, 255, 0.4);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
-        min-width: 5.2rem;
+        flex: 1;
+        min-width: 0;
     }
 
     .bottom-bar-item i {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        line-height: 1;
     }
 
     .bottom-bar-item span {
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 500;
-        letter-spacing: 0.02rem;
+        letter-spacing: 0.01rem;
         color: inherit;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        text-align: center;
     }
 
     .bottom-bar-item.active {
@@ -131,8 +149,8 @@ nav a.active {
     }
 
     .bottom-bar-item.active i {
-        transform: translateY(-2px) scale(1.15);
-        filter: drop-shadow(0 0 6px rgba(229, 7, 7, 0.6));
+        transform: translateY(-1px) scale(1.12);
+        filter: drop-shadow(0 0 6px rgba(229, 7, 7, 0.5));
     }
 
     .bottom-bar-item.active::before {
@@ -141,9 +159,9 @@ nav a.active {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 2rem;
-        height: 0.3rem;
-        border-radius: 0 0 0.3rem 0.3rem;
+        width: 1.8rem;
+        height: 0.25rem;
+        border-radius: 0 0 0.25rem 0.25rem;
         background: #e50707;
         box-shadow: 0 2px 8px rgba(229, 7, 7, 0.5);
     }
@@ -154,12 +172,34 @@ nav a.active {
 
     /* Tap feedback */
     .bottom-bar-item:active {
-        transform: scale(0.92);
+        transform: scale(0.9);
+        opacity: 0.8;
     }
 
     /* Add bottom padding so content isn't hidden behind the bar */
     body {
-        padding-bottom: 7.5rem;
+        padding-bottom: 7rem;
+    }
+
+    /* Remove top padding from sections since header is hidden */
+    section {
+        padding-top: 2rem;
+    }
+}
+
+/* Extra small phones (≤ 380px) */
+@media(max-width:380px) {
+    .bottom-bar-item span {
+        font-size: 0.78rem;
+    }
+
+    .bottom-bar-item i {
+        font-size: 1.5rem;
+    }
+
+    .mobile-bottom-bar {
+        padding: 0.3rem 0.2rem;
+        padding-bottom: calc(0.3rem + env(safe-area-inset-bottom, 0px));
     }
 }
 
@@ -167,6 +207,21 @@ nav a.active {
 section {
     min-height: 100vh;
     padding: 5rem 9% 5rem;
+}
+
+/* On mobile, reduce top padding since header is hidden */
+@media(max-width:995px) {
+    section {
+        padding-top: 3rem;
+    }
+
+    .services,
+    .skills,
+    .education,
+    .experience,
+    .contact {
+        padding-top: 3rem;
+    }
 }
 
 /* ========== HOME PAGE ========== */
@@ -400,7 +455,7 @@ span {
 }
 
 @media (max-width: 450px) {
-    .services { padding: 8rem 5% 5rem; }
+    .services { padding: 3rem 5% 5rem; }
     .services .heading { font-size: 3.5rem; }
     .services-container { grid-template-columns: 1fr; }
     .service-box h3 { font-size: 2.2rem; }
@@ -493,7 +548,7 @@ span {
 }
 
 @media (max-width: 450px) {
-    .skills { padding: 8rem 5% 5rem; }
+    .skills { padding: 3rem 5% 5rem; }
     .skills .heading { font-size: 3.5rem; }
     .skill-category { padding: 2.5rem 2rem; }
     .skill-category h3 { font-size: 2rem; }
@@ -748,7 +803,7 @@ span {
 }
 
 @media (max-width: 450px) {
-    .education { padding: 8rem 5% 5rem; }
+    .education { padding: 3rem 5% 5rem; }
     .education .heading { font-size: 3.5rem; margin-bottom: 3rem; }
     .education-box { padding: 2.5rem 2rem; }
     .education-header {
@@ -988,7 +1043,7 @@ span {
 }
 
 @media (max-width: 450px) {
-    .experience { padding: 8rem 5% 5rem; }
+    .experience { padding: 3rem 5% 5rem; }
     .experience .heading { font-size: 3.5rem; }
     .timeline { padding-left: 2.5rem; }
     .timeline::before { left: 1rem; }
@@ -1219,7 +1274,7 @@ span {
 }
 
 @media (max-width: 450px) {
-    .contact { padding: 8rem 5% 5rem; }
+    .contact { padding: 3rem 5% 5rem; }
     .contact .heading { font-size: 3.5rem; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
     .contact-form { padding: 2rem 1.5rem; }
