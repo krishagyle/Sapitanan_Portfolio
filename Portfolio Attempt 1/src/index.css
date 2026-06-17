@@ -66,71 +66,100 @@ nav a.active {
     border-bottom: 3px solid #e50707;
 }
 
+/* Hide desktop nav on mobile */
 @media(max-width:995px) {
-    nav {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #e50707;
-        border-bottom: 3px solid #e50707;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0, 1);
-    }
-
-    nav.active {
-        display: block;
-    }
-
-    nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #e50707;
+    #navbar {
+        display: none !important;
     }
 }
 
-/* ========== MOBILE MENU ICON ========== */
-#menu-icon {
+/* ========== MOBILE BOTTOM TASKBAR ========== */
+.mobile-bottom-bar {
     display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 0.5rem;
-}
-
-#menu-icon span {
-    display: block;
-    width: 2.5rem;
-    height: 0.3rem;
-    background-color: #e50707;
-    border-radius: 0.3rem;
-    transition: 0.3s ease;
-}
-
-#menu-icon.active span:nth-child(1) {
-    transform: rotate(45deg) translate(0.7rem, 0.7rem);
-}
-
-#menu-icon.active span:nth-child(2) {
-    opacity: 0;
-}
-
-#menu-icon.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(0.7rem, -0.7rem);
 }
 
 @media(max-width:995px) {
-    #menu-icon {
+    .mobile-bottom-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+        background: rgba(14, 14, 14, 0.92);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-top: 1px solid rgba(229, 7, 7, 0.25);
+        padding: 0.6rem 0;
+        padding-bottom: calc(0.6rem + env(safe-area-inset-bottom, 0px));
+        box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5),
+                    0 -1px 8px rgba(229, 7, 7, 0.1);
+    }
+
+    .bottom-bar-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 1.2rem;
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 1rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        min-width: 5.2rem;
+    }
+
+    .bottom-bar-item i {
+        font-size: 1.8rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .bottom-bar-item span {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.02rem;
+        color: inherit;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .bottom-bar-item.active {
+        color: #e50707;
+    }
+
+    .bottom-bar-item.active i {
+        transform: translateY(-2px) scale(1.15);
+        filter: drop-shadow(0 0 6px rgba(229, 7, 7, 0.6));
+    }
+
+    .bottom-bar-item.active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2rem;
+        height: 0.3rem;
+        border-radius: 0 0 0.3rem 0.3rem;
+        background: #e50707;
+        box-shadow: 0 2px 8px rgba(229, 7, 7, 0.5);
+    }
+
+    .bottom-bar-item.active span {
+        font-weight: 600;
+    }
+
+    /* Tap feedback */
+    .bottom-bar-item:active {
+        transform: scale(0.92);
+    }
+
+    /* Add bottom padding so content isn't hidden behind the bar */
+    body {
+        padding-bottom: 7.5rem;
     }
 }
 
