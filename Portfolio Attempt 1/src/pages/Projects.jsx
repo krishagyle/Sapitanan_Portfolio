@@ -54,6 +54,14 @@ function Projects() {
             <p className="project-desc">
               This application was developed to help teachers check students' answer sheets more efficiently. By using the ZPH Paper format, the system can automatically evaluate students' answers, calculate their scores, and display the results instantly.
             </p>
+            <div className="project-links">
+              <a href="https://canva.link/xwqdxdah3ehlhi5" target="_blank" rel="noopener noreferrer" className="project-link">
+                <i className="fa-solid fa-book"></i> User Manual
+              </a>
+              <a href="https://drive.google.com/drive/folders/17EKi_ur4SZihflgxJrZeCYgzK34dwa0k?usp=drive_link" target="_blank" rel="noopener noreferrer" className="project-link">
+                <i className="fa-solid fa-images"></i> Project Images
+              </a>
+            </div>
             <div className="project-tags">
               <span className="tag">Education</span>
               <span className="tag">Automation</span>
@@ -75,6 +83,14 @@ function Projects() {
             <p className="project-desc">
               This web-based system helps fresh graduates identify jobs that best match their qualifications using their resumes. Users can upload or paste their resumes, which the system analyzes to determine their skills and qualifications. It then presents the top three job opportunities most suitable for them and recommends relevant courses to help further develop their skills and enhance their career prospects.
             </p>
+            <div className="project-links">
+              <a href="https://canva.link/r6pd7kzp79mfm4q" target="_blank" rel="noopener noreferrer" className="project-link">
+                <i className="fa-solid fa-book"></i> User Manual
+              </a>
+              <a href="https://drive.google.com/drive/folders/1v7ge5X63EIkGfhyCWg5HPYQnurBMvtJy?usp=drive_link" target="_blank" rel="noopener noreferrer" className="project-link">
+                <i className="fa-solid fa-images"></i> Project Images
+              </a>
+            </div>
             <div className="project-tags">
               <span className="tag">Web App</span>
               <span className="tag">AI/ML</span>
