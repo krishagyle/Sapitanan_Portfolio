@@ -51,7 +51,7 @@ header {
     transform: scale(1.1);
 }
 
-nav a {
+#navbar a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
@@ -60,8 +60,8 @@ nav a {
     border-bottom: 3px solid transparent;
 }
 
-nav a:hover,
-nav a.active {
+#navbar a:hover,
+#navbar a.active {
     color: #e50707;
     border-bottom: 3px solid #e50707;
 }
@@ -84,7 +84,9 @@ nav a.active {
         bottom: 0;
         left: 0;
         right: 0;
+        width: 100%;
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
         z-index: 1000;
@@ -92,49 +94,49 @@ nav a.active {
         backdrop-filter: blur(24px) saturate(200%);
         -webkit-backdrop-filter: blur(24px) saturate(200%);
         border-top: 1px solid rgba(229, 7, 7, 0.2);
-        padding: 0.4rem 0.4rem;
-        padding-bottom: calc(0.4rem + env(safe-area-inset-bottom, 0px));
+        padding: 6px 2px;
+        padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
         box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.6),
                     0 -1px 10px rgba(229, 7, 7, 0.08);
     }
 
-    /* Reset inherited nav a styles for bottom bar */
-    .mobile-bottom-bar .bottom-bar-item {
-        margin-left: 0;
-        border-bottom: none;
-        font-size: inherit;
-    }
-
-    .mobile-bottom-bar .bottom-bar-item:hover,
-    .mobile-bottom-bar .bottom-bar-item.active {
-        border-bottom: none;
-    }
-
-    .bottom-bar-item {
+    .mobile-bottom-bar a.bottom-bar-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0.2rem;
-        padding: 0.5rem 0;
-        border-radius: 1rem;
+        gap: 2px;
+        padding: 4px 0;
+        border-radius: 8px;
         color: rgba(255, 255, 255, 0.4);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
-        flex: 1;
+        flex: 1 1 0%;
         min-width: 0;
+        max-width: 16.666%;
+        /* Override any inherited nav a styles */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-bottom: none !important;
+        font-size: 10px !important;
+        font-weight: 500;
     }
 
-    .bottom-bar-item i {
-        font-size: 1.7rem;
+    .mobile-bottom-bar a.bottom-bar-item:hover,
+    .mobile-bottom-bar a.bottom-bar-item.active {
+        border-bottom: none !important;
+    }
+
+    .mobile-bottom-bar .bottom-bar-item i {
+        font-size: 18px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         line-height: 1;
     }
 
-    .bottom-bar-item span {
-        font-size: 0.9rem;
+    .mobile-bottom-bar .bottom-bar-item span {
+        font-size: 9px;
         font-weight: 500;
-        letter-spacing: 0.01rem;
+        letter-spacing: 0;
         color: inherit;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         white-space: nowrap;
@@ -142,43 +144,44 @@ nav a.active {
         text-overflow: ellipsis;
         max-width: 100%;
         text-align: center;
+        display: block;
     }
 
-    .bottom-bar-item.active {
+    .mobile-bottom-bar .bottom-bar-item.active {
         color: #e50707;
     }
 
-    .bottom-bar-item.active i {
-        transform: translateY(-1px) scale(1.12);
+    .mobile-bottom-bar .bottom-bar-item.active i {
+        transform: translateY(-1px) scale(1.1);
         filter: drop-shadow(0 0 6px rgba(229, 7, 7, 0.5));
     }
 
-    .bottom-bar-item.active::before {
+    .mobile-bottom-bar .bottom-bar-item.active::before {
         content: '';
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 1.8rem;
-        height: 0.25rem;
-        border-radius: 0 0 0.25rem 0.25rem;
+        width: 16px;
+        height: 3px;
+        border-radius: 0 0 3px 3px;
         background: #e50707;
         box-shadow: 0 2px 8px rgba(229, 7, 7, 0.5);
     }
 
-    .bottom-bar-item.active span {
+    .mobile-bottom-bar .bottom-bar-item.active span {
         font-weight: 600;
     }
 
     /* Tap feedback */
-    .bottom-bar-item:active {
+    .mobile-bottom-bar .bottom-bar-item:active {
         transform: scale(0.9);
         opacity: 0.8;
     }
 
     /* Add bottom padding so content isn't hidden behind the bar */
     body {
-        padding-bottom: 7rem;
+        padding-bottom: 70px;
     }
 
     /* Remove top padding from sections since header is hidden */
@@ -189,17 +192,12 @@ nav a.active {
 
 /* Extra small phones (≤ 380px) */
 @media(max-width:380px) {
-    .bottom-bar-item span {
-        font-size: 0.78rem;
+    .mobile-bottom-bar .bottom-bar-item span {
+        font-size: 8px;
     }
 
-    .bottom-bar-item i {
-        font-size: 1.5rem;
-    }
-
-    .mobile-bottom-bar {
-        padding: 0.3rem 0.2rem;
-        padding-bottom: calc(0.3rem + env(safe-area-inset-bottom, 0px));
+    .mobile-bottom-bar .bottom-bar-item i {
+        font-size: 16px;
     }
 }
 
