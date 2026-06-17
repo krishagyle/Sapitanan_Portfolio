@@ -359,13 +359,33 @@ span {
 @media(max-width:995px) {
     .home {
         flex-direction: column;
-        margin: 5rem 4rem;
+        margin: 2rem 3rem;
+        gap: 2rem;
     }
-    .home .home-content h3 { font-size: 2.5rem; }
-    .home-content h1 { font-size: 5rem; }
+    .home-img {
+        margin-top: 1rem;
+    }
+    .home .home-content h3 { font-size: 2rem; }
+    .home-content h1 { font-size: 3.5rem; }
+    .home-content p { font-size: 1.3rem; }
     .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
+        width: 55vw;
+        margin-top: 2rem;
+    }
+    .typing-text {
+        font-size: 22px;
+        min-width: 200px;
+    }
+    .social-icons a {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.5rem;
+        margin: 1.5rem 1rem 1.5rem 0;
+    }
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.3rem;
+        letter-spacing: 0.15rem;
     }
 }
 
@@ -444,20 +464,27 @@ span {
 }
 
 @media (max-width: 768px) {
-    .services .heading { font-size: 4rem; }
+    .services .heading { font-size: 3rem; margin-bottom: 2.5rem; }
     .services-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
+        margin-top: 3rem;
     }
     .service-box { padding: 2.5rem 2rem; }
+    .service-box h3 { font-size: 2rem; }
+    .service-box p { font-size: 1.4rem; }
+    .service-box i { font-size: 4rem; }
 }
 
 @media (max-width: 450px) {
     .services { padding: 3rem 5% 5rem; }
-    .services .heading { font-size: 3.5rem; }
-    .services-container { grid-template-columns: 1fr; }
-    .service-box h3 { font-size: 2.2rem; }
-    .service-box i { font-size: 4rem; }
+    .services .heading { font-size: 2.6rem; margin-bottom: 2rem; }
+    .services-container { grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; }
+    .service-box { padding: 2rem 1.5rem; border-radius: 1.5rem; }
+    .service-box h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+    .service-box i { font-size: 3rem; margin-bottom: 1rem; }
+    .service-box p { font-size: 1.3rem; margin-bottom: 1.5rem; line-height: 1.6; }
+    .service-box .btn { font-size: 1.2rem; padding: 0.7rem 1.8rem; }
 }
 
 /* ========== SKILLS PAGE ========== */
@@ -540,18 +567,24 @@ span {
 }
 
 @media (max-width: 768px) {
-    .skills .heading { font-size: 4rem; }
-    .skills-container { grid-template-columns: 1fr; gap: 2.5rem; }
-    .skill-category h3 { font-size: 2.2rem; }
+    .skills .heading { font-size: 3rem; margin-bottom: 2.5rem; }
+    .skills-container { grid-template-columns: 1fr; gap: 2rem; margin-top: 3rem; }
+    .skill-category h3 { font-size: 2rem; }
+    .skill-name { font-size: 1.6rem; }
+    .skill-tech { font-size: 1.3rem; }
 }
 
 @media (max-width: 450px) {
     .skills { padding: 3rem 5% 5rem; }
-    .skills .heading { font-size: 3.5rem; }
-    .skill-category { padding: 2.5rem 2rem; }
-    .skill-category h3 { font-size: 2rem; }
-    .skill-name { font-size: 1.6rem; }
-    .skill-tech { font-size: 1.4rem; }
+    .skills .heading { font-size: 2.6rem; margin-bottom: 2rem; }
+    .skills-container { gap: 1.5rem; margin-top: 2rem; }
+    .skill-category { padding: 2rem 1.5rem; border-radius: 1.5rem; }
+    .skill-category h3 { font-size: 1.7rem; margin-bottom: 1.2rem; }
+    .skill-category h3 i { font-size: 2rem; }
+    .skill-list { gap: 1rem; }
+    .skill-item { padding: 1rem; }
+    .skill-name { font-size: 1.4rem; }
+    .skill-tech { font-size: 1.2rem; }
 }
 
 /* ========== EDUCATION PAGE STYLES ========== */
@@ -792,32 +825,55 @@ span {
 
 /* Education Responsive */
 @media (max-width: 768px) {
-    .education .heading { font-size: 4rem; }
+    .education .heading { font-size: 3rem; margin-bottom: 2.5rem; }
     .education-container {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 2rem;
     }
+    .education-box { padding: 2.5rem 2rem; }
+    .education-header h3 { font-size: 2rem; }
+    .education-header i { font-size: 2.8rem; }
+    .school-name { font-size: 1.6rem; }
+    .location { font-size: 1.3rem; }
+    .date { font-size: 1.3rem; }
     .development-list { grid-template-columns: 1fr; }
+    .development-category h3 { font-size: 2.2rem; }
 }
 
 @media (max-width: 450px) {
     .education { padding: 3rem 5% 5rem; }
-    .education .heading { font-size: 3.5rem; margin-bottom: 3rem; }
-    .education-box { padding: 2.5rem 2rem; }
+    .education .heading { font-size: 2.6rem; margin-bottom: 2rem; }
+    .education-container { gap: 1.5rem; margin-top: 2rem; }
+    .education-box { padding: 2rem 1.5rem; border-radius: 1.5rem; }
     .education-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        gap: 0.6rem;
+        margin-bottom: 0.8rem;
     }
-    .education-header h3 { font-size: 2rem; }
-    .education-header i { font-size: 3rem; }
-    .school-name, .location, .date {
-        flex-direction: column;
-        align-items: flex-start;
+    .education-header h3 { font-size: 1.7rem; }
+    .education-header i { font-size: 2.2rem; }
+    .education-info h4 { font-size: 1.4rem; margin-bottom: 1rem; }
+    .school-name {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
         gap: 0.5rem;
     }
-    .development-category h3 { font-size: 2.2rem; }
-    .development-item h4 { font-size: 1.6rem; }
+    .school-name i { font-size: 1.3rem; }
+    .location { font-size: 1.2rem; margin-bottom: 0.5rem; gap: 0.5rem; }
+    .location i { font-size: 1.1rem; }
+    .date { font-size: 1.2rem; margin-bottom: 1rem; gap: 0.5rem; }
+    .date i { font-size: 1.1rem; }
+    .achievements { margin-top: 1.2rem; padding-top: 1rem; }
+    .achievements h5 { font-size: 1.4rem; margin-bottom: 0.6rem; }
+    .achievements li { font-size: 1.2rem; margin-bottom: 0.5rem; padding-left: 1.5rem; }
+    .development-container { margin-top: 3rem; }
+    .development-category { padding: 2rem 1.5rem; border-radius: 1.5rem; }
+    .development-category h3 { font-size: 1.8rem; margin-bottom: 2rem; }
+    .development-category h3 i { font-size: 2rem; }
+    .development-item { padding: 1.5rem; }
+    .development-item h4 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+    .development-item p { font-size: 1.2rem; margin-bottom: 0.4rem; }
 }
 
 /* ========== EXPERIENCE PAGE STYLES ========== */
@@ -1030,28 +1086,46 @@ span {
 
 /* Experience Responsive */
 @media (max-width: 768px) {
-    .experience .heading { font-size: 4rem; }
-    .timeline { padding-left: 3rem; }
-    .timeline-content { padding: 2.5rem 2rem; }
+    .experience .heading { font-size: 3rem; margin-bottom: 2.5rem; }
+    .timeline { padding-left: 3rem; margin-top: 3rem; }
+    .timeline-item { margin-bottom: 3rem; }
+    .timeline-content { padding: 2rem 1.5rem; }
     .exp-title {
         flex-direction: column;
         align-items: flex-start;
     }
-    .exp-title h3 { font-size: 2rem; }
+    .exp-title h3 { font-size: 1.8rem; }
+    .exp-meta p { font-size: 1.3rem; }
+    .exp-details h4 { font-size: 1.5rem; }
+    .exp-role-desc { font-size: 1.2rem; }
+    .exp-duties li { font-size: 1.3rem; }
 }
 
 @media (max-width: 450px) {
     .experience { padding: 3rem 5% 5rem; }
-    .experience .heading { font-size: 3.5rem; }
-    .timeline { padding-left: 2.5rem; }
-    .timeline::before { left: 1rem; }
+    .experience .heading { font-size: 2.6rem; margin-bottom: 2rem; }
+    .timeline { padding-left: 2rem; margin-top: 2rem; }
+    .timeline::before { left: 0.8rem; width: 2px; }
+    .timeline-item { margin-bottom: 2.5rem; }
     .timeline-dot {
-        left: -2rem;
-        width: 1.2rem;
-        height: 1.2rem;
+        left: -1.6rem;
+        width: 1rem;
+        height: 1rem;
+        top: 2rem;
     }
-    .timeline-content { padding: 2rem 1.5rem; }
-    .exp-title h3 { font-size: 1.8rem; }
+    .timeline-content { padding: 1.5rem 1.2rem; border-radius: 1.5rem; }
+    .exp-header { margin-bottom: 1.2rem; padding-bottom: 1.2rem; }
+    .exp-title { gap: 0.6rem; margin-bottom: 1rem; }
+    .exp-title h3 { font-size: 1.5rem; gap: 0.6rem; }
+    .exp-title h3 i { font-size: 1.4rem; }
+    .exp-badge { font-size: 1.1rem; padding: 0.3rem 1rem; }
+    .exp-meta p { font-size: 1.2rem; margin-bottom: 0.4rem; gap: 0.6rem; }
+    .exp-meta p i { font-size: 1.1rem; width: 1.5rem; }
+    .exp-details h4 { font-size: 1.4rem; margin-bottom: 0.8rem; }
+    .exp-details h4 i { font-size: 1.3rem; }
+    .exp-role-desc { font-size: 1.2rem; padding: 0.8rem 1rem; margin-bottom: 1rem; }
+    .exp-duties li { font-size: 1.2rem; margin-bottom: 0.8rem; padding-left: 2rem; line-height: 1.5; }
+    .exp-duties li::before { font-size: 1.4rem; }
 }
 
 /* ========== CONTACT PAGE STYLES ========== */
@@ -1266,20 +1340,47 @@ span {
 }
 
 @media (max-width: 768px) {
-    .contact .heading { font-size: 4rem; }
-    .contact-form { padding: 2.5rem; }
-    .contact-form h3 { font-size: 2.2rem; }
+    .contact .heading { font-size: 3rem; margin-bottom: 2.5rem; }
+    .contact-container { gap: 2.5rem; margin-top: 3rem; }
+    .contact-form { padding: 2rem; }
+    .contact-form h3 { font-size: 2rem; margin-bottom: 2rem; }
+    .info-card { padding: 1.5rem; gap: 1.5rem; }
+    .info-text h4 { font-size: 1.6rem; }
+    .info-text p { font-size: 1.3rem; }
+    .input-group input,
+    .input-group textarea { font-size: 1.4rem; }
 }
 
 @media (max-width: 450px) {
     .contact { padding: 3rem 5% 5rem; }
-    .contact .heading { font-size: 3.5rem; }
+    .contact .heading { font-size: 2.6rem; margin-bottom: 2rem; }
+    .contact-container { gap: 2rem; margin-top: 2rem; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
-    .contact-form { padding: 2rem 1.5rem; }
+    .contact-form { padding: 1.5rem 1.2rem; border-radius: 1.5rem; }
+    .contact-form h3 { font-size: 1.8rem; margin-bottom: 2rem; }
+    .input-group { margin-bottom: 1.5rem; }
+    .input-group label { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .input-group input,
+    .input-group textarea { padding: 1rem 1.2rem; font-size: 1.3rem; }
+    .input-group textarea { min-height: 10rem; }
+    .submit-btn { padding: 1.1rem 2rem; font-size: 1.4rem; }
     .info-card {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    .info-icon { width: 4rem; height: 4rem; min-width: 4rem; border-radius: 0.8rem; }
+    .info-icon i { font-size: 1.6rem; }
+    .info-text h4 { font-size: 1.5rem; }
+    .info-text p { font-size: 1.3rem; }
+    .contact-socials { padding: 1.5rem; }
+    .contact-socials h4 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .contact-socials .social-icons a {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.5rem;
     }
 }
 
