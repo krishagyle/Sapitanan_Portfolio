@@ -1675,7 +1675,7 @@ span {
 .toast {
     position: fixed;
     top: 2.5rem;
-    right: -40rem;
+    right: -50rem;
     min-width: 30rem;
     max-width: 45rem;
     padding: 1.6rem 2rem;
