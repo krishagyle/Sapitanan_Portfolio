@@ -17,7 +17,7 @@ function Home() {
           <a href="https://github.com/krishagyle" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i className="fa-brands fa-github"></i></a>
           <a href="#" aria-label="X / Twitter"><i className="fa-brands fa-x-twitter"></i></a>
           <a href="https://www.instagram.com/krishagyle.04/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
+          <a href="https://www.facebook.com/krishagyle" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
         </div>
         <Link to="/contact" className="btn">Hire me</Link>
       </div>
